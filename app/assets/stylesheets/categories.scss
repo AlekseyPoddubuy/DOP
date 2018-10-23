@@ -9,3 +9,17 @@
 		}
 	}
 }
+
+/* Second type of categories menu */
+
+.categories {
+	border-radius: 10px;
+	background: #f2f2f2;
+	padding: 5px 10px;
+	li {
+		list-style-type: none;
+		background: #fff;
+		margin: 10px 0;
+		padding: 10px 5px 10px 20px;
+	}
+}
