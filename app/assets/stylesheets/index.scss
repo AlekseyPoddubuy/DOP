@@ -1,0 +1,23 @@
+.banner {
+	background-image: image-url('banner.jpg');
+	height: 100vh;
+	background-size: cover;
+	.slogan {
+		margin-top: 200px;
+		h1 {
+			font-size: 60px;
+			color: #fff;
+			text-transform: uppercase;
+			font-weight: bold;
+		}
+	}
+}
+
+.vacancies {
+	background-color: #f6f6f6;
+}
+.vacancy-main {
+	background-color: #fff;
+	min-height: 400px;
+	margin-bottom: 30px;
+}

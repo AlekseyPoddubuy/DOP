@@ -1,0 +1,61 @@
+<div class="banner">
+	<header>
+		<div class="container ">
+			<div class="row">
+				<div class="col-lg-3">
+					<div class="logo">
+						<%= image_tag 'logo.png'  %>
+					</div>
+				</div>
+				<div class="col-lg-9">
+					<div class="menu">
+						<ul>
+							<li><%= link_to "Главная", '#' %></li>
+							<li><%= link_to "О проекте" %></li>
+							<li><%= link_to "Вакансии" %></li>
+							<li><%= link_to "Услуги" %></li>
+							<li><%= link_to "Сотруднечество" %></li>
+							<li><%= link_to "Контакты" %></li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+		</div>	
+	</header>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="slogan">
+					<h1>
+						Построй свою мечту <br>
+						<span>вместе с D.O.P</span>
+					</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="vacancies">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="trigger">
+					<h1>Лучшие предложения от компании DOP</h1>
+					<hr>
+				</div>
+			</div>
+			<% @vacancies.each do |vacancy| %>
+			<div class="col-lg-4">
+				<div class="vacancy-main">
+					<%= image_tag 'vacprev1.jpg' %>
+					<p class="vm-title"><%= vacancy.title %></p>
+					<p class="vm-body"><%= vacancy.body %></p>
+					<p class="vm-add">1</p>
+				</div>
+			</div>
+			<% end %>
+		</div>
+	</div>
+</div>
