@@ -1,47 +1,52 @@
 <%= form_with(model: vacancy, local: true) do |form| %>
-  <% if vacancy.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(vacancy.errors.count, "error") %> prohibited this vacancy from being saved:</h2>
+<% if vacancy.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(vacancy.errors.count, "error") %> prohibited this vacancy from being saved:</h2>
 
-      <ul>
-      <% vacancy.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <ul>
+    <% vacancy.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
+<div class="field">
+  <%= form.label :title %>
+  <%= form.text_field :title %>
+</div>
 
-  <div class="field">
-    <%= form.label :payment %>
-    <%= form.number_field :payment %>
-  </div>
+<div class="field">
+  <%= form.label :payment %>
+  <%= form.number_field :payment %>
+</div>
 
-  <div class="field">
-    <%= form.label :body %>
-    <%= form.text_area :body %>
-  </div>
+<div class="field">
+<%= form.collection_select :category_id, Category.order(:title), :id, :title, { include_blank: "Выберите страну" }, required: true %>
 
-  <div class="field">
-    <%= form.label :date %>
-    <%= form.date_select :date %>
-  </div>
+</div>
 
-  <div class="field">
-    <%= form.label :desc %>
-    <%= form.text_area :desc %>
-  </div>
+<div class="field">
+  <%= form.label :body %>
+  <%= form.text_area :body %>
+</div>
 
-  <div class="field">
-    <%= form.label :skills %>
-    <%= form.text_field :skills %>
-  </div>
+<div class="field">
+  <%= form.label :date %>
+  <%= form.date_select :date %>
+</div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+<div class="field">
+  <%= form.label :desc %>
+  <%= form.text_area :desc %>
+</div>
+
+<div class="field">
+  <%= form.label :skills %>
+  <%= form.text_field :skills %>
+</div>
+
+<div class="actions">
+  <%= form.submit %>
+</div>
 <% end %>

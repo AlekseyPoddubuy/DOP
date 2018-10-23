@@ -1,23 +1,28 @@
+<% @vacancies.each do |vacancy| %>
+<%= vacancy.title %>
+<% end %>
+
+
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
-  <%= @category.title %>
+	<strong>Title:</strong>
+	<%= @category.title %>
 </p>
 
 <p>
-  <strong>Body:</strong>
-  <%= @category.body %>
+	<strong>Body:</strong>
+	<%= @category.body %>
 </p>
 
 <p>
-  <strong>Desc:</strong>
-  <%= @category.desc %>
+	<strong>Desc:</strong>
+	<%= @category.desc %>
 </p>
 
 <p>
-  <strong>Slug:</strong>
-  <%= @category.slug %>
+	<strong>Slug:</strong>
+	<%= @category.slug %>
 </p>
 
 <%= link_to 'Edit', edit_category_path(@category) %> |

@@ -5,46 +5,14 @@
 <div class="container">
   <div class="row">
     <% @categories.each do |category| %>
-    <div class="col-lg-3">
-      <%= image_tag 'vacprev1.jpg' %>
-      <%= category.title %>
+    <div class="col-lg-6">
+      <div class="country">
+        <%= link_to (image_tag 'au.jpg'), category %>
+        <p>
+          <%= link_to category.title, category %>
+        </p>
+      </div>
     </div>
     <% end %>
   </div>
 </div>
-
-
-
-<!--
-<h1>Categories</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Body</th>
-      <th>Desc</th>
-      <th>Slug</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @categories.each do |category| %>
-    <tr>
-      <td><%= category.title %></td>
-      <td><%= category.body %></td>
-      <td><%= category.desc %></td>
-      <td><%= category.slug %></td>
-      <td><%= link_to 'Show', category %></td>
-      <td><%= link_to 'Edit', edit_category_path(category) %></td>
-      <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Category', new_category_path %>
--->
