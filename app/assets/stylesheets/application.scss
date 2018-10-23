@@ -1,9 +1,13 @@
 @import 'bootstrap/dist/css/bootstrap';
 
 @import 'header';
+@import 'footer';
 @import 'index';
 
 
+body {
+	font-family: 'Play', sans-serif !important ;
+}
 img {
 	width: 100%;
 }

@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :vacancies
   get 'index' => 'pages#index', as: :index
   get 'about' => 'pages#about', as: :about
+  get 'cooperation' => 'pages#cooperation', as: :cooperation
   get 'contacts' => 'pages#contacts', as: :contacts
   get 'services' => 'pages#services', as: :services
 end
