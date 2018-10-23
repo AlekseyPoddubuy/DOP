@@ -2,6 +2,41 @@
   <h1>Широкий выбор возможностей с DOP</h1>
   <hr>
 </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-3">
+      <div class="categories">
+        <ul>
+          <li>Вакансии по странам:</li>
+          <% @categories.each do |category| %>
+          <%= link_to (category) do %>
+          <li>
+            <%= category.title %>
+          </li>
+          <% end %>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+    <div class="col-lg-9">
+      <div class="row">
+        <% @vacancies.each do |vacancy| %>
+        <div class="col-lg-4">
+          <%= vacancy.title %>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
 <div class="container">
   <div class="row">
     <% @categories.each do |category| %>

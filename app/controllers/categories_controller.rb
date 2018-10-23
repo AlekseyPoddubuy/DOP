@@ -5,12 +5,14 @@ class CategoriesController < ApplicationController
   # GET /categories.json
   def index
     @categories = Category.all
+    @vacancies = Vacancy.all
   end
 
   # GET /categories/1
   # GET /categories/1.json
   def show
     @vacancies = Vacancy.where(category_id: [@category])
+    @categories = Category.all
   end
 
   # GET /categories/new
@@ -72,4 +74,4 @@ class CategoriesController < ApplicationController
     def category_params
       params.require(:category).permit(:title, :body, :desc, :slug)
     end
-end
+  end
