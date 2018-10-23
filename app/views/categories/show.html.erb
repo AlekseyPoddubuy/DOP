@@ -1,29 +1,30 @@
-<% @vacancies.each do |vacancy| %>
-<%= vacancy.title %>
-<% end %>
+<div class="trigger">
+<h1>Актуальные вакансии - <%= @category.title %></h1>
+	<hr>
+</div>
 
+<div class="container">
+	<div class="row">
+		<div class="col-lg-3">
+			<div class="categories">
+				<ul>
+					<li>Вакансии по странам:</li>
+					<% @categories.each do |category| %>
+					<%= link_to (category) do %>
+					<li>
+						<%= category.title %>
+					</li>
+					<% end %>
+					<% end %>
+				</ul>
+			</div>
+		</div>
+		<div class="col-lg-9">
 
-<p id="notice"><%= notice %></p>
+			<% @vacancies.each do |vacancy| %>
+			<%= vacancy.title %>
+			<% end %>
 
-<p>
-	<strong>Title:</strong>
-	<%= @category.title %>
-</p>
-
-<p>
-	<strong>Body:</strong>
-	<%= @category.body %>
-</p>
-
-<p>
-	<strong>Desc:</strong>
-	<%= @category.desc %>
-</p>
-
-<p>
-	<strong>Slug:</strong>
-	<%= @category.slug %>
-</p>
-
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
+		</div>
+	</div>
+</div>
