@@ -1,34 +1,24 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @vacancy.title %>
-</p>
-
-<p>
-  <strong>Payment:</strong>
-  <%= @vacancy.payment %>
-</p>
-
-<p>
-  <strong>Body:</strong>
-  <%= @vacancy.body %>
-</p>
-
-<p>
-  <strong>Date:</strong>
-  <%= @vacancy.date %>
-</p>
-
-<p>
-  <strong>Desc:</strong>
-  <%= @vacancy.desc %>
-</p>
-
-<p>
-  <strong>Skills:</strong>
-  <%= @vacancy.skills %>
-</p>
-
-<%= link_to 'Edit', edit_vacancy_path(@vacancy) %> |
-<%= link_to 'Back', vacancies_path %>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="trigger">
+        <h1><%= @vacancy.title %></h1>
+        <hr>
+      </div>
+    </div>
+    <%= render 'components/sidebar' %>
+    <div class="col-lg-9">
+      <div class="vacancy-details">
+        <%= image_tag 'au.jpg' %>
+        <ul>
+          <li><strong>Зароботная платна:</strong> <%= @vacancy.payment %></li>
+          <li><strong>Необходимые навыки:</strong> <%= @vacancy.skills %></li>
+          <li><strong>Опубликовано:</strong> <%= @vacancy.date %></li>
+        </ul>
+        <div class="vacancy-desc">
+          <%= @vacancy.desc %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

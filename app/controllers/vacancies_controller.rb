@@ -10,6 +10,7 @@ class VacanciesController < ApplicationController
   # GET /vacancies/1
   # GET /vacancies/1.json
   def show
+    @categories = Category.all
   end
 
   # GET /vacancies/new
@@ -69,6 +70,6 @@ class VacanciesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def vacancy_params
-      params.require(:vacancy).permit(:title, :payment, :body, :date, :desc, :skills, :category_id)
+      params.require(:vacancy).permit(:title, :payment, :body, :date, :desc, :skills, :category_id, :avatar, :banner)
     end
-end
+  end

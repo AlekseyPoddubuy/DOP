@@ -1,3 +1,16 @@
-// Place all the styles related to the vacancies controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.vacancy {
+	p {
+		margin: 10px 0;
+		text-align: center;
+	}
+}
+.vacancy-details {
+	ul {
+		padding: 20px 0;
+		text-align: center;
+		li {
+			display: inline-block;
+			list-style-type: none;
+		}
+	}
+}

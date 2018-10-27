@@ -21,6 +21,9 @@
   <%= form.number_field :payment %>
 </div>
 
+<%= form.file_field :avatar %>
+<%= form.file_field :banner %>
+
 <div class="field">
 <%= form.collection_select :category_id, Category.order(:title), :id, :title, { include_blank: "Выберите страну" }, required: true %>
 

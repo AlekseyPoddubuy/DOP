@@ -36,7 +36,6 @@
 		</div>
 	</div>
 </div>
-
 <div class="vacancies">
 	<div class="container">
 		<div class="row">
@@ -46,18 +45,52 @@
 					<hr>
 				</div>
 			</div>
+		</div>
+		<div class="row">
 			<% @vacancies.each do |vacancy| %>
 			<div class="col-lg-4">
-				<div class="vacancy-main">
-					<%= image_tag 'vacprev1.jpg' %>
-					<p class="vm-title"><%= vacancy.title %></p>
-					<p class="vm-body"><%= vacancy.body %></p>
-					<p class="vm-add">1</p>
+				<div class="vacancy">
+					<%= link_to (image_tag "01.jpg"), vacancy %>
+					<p>
+						<%= link_to vacancy.title, vacancy %>
+					</p>
 				</div>
 			</div>
 			<% end %>
-			<div class="container pagination justify-content-center" >
-				<%= paginate @vacancies, theme: 'twitter-bootstrap-4' %>
+		</div>
+		<div class="container pagination justify-content-center" >
+			<%= paginate @vacancies, theme: 'twitter-bootstrap-4' %>
+		</div>
+	</div>
+</div>
+<div class="think">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8">
+				<div class="trigger">
+					<h2>
+						Все ещё в <span>поиске работы</span> по душе<span>?</span>						
+					</h2>
+				</div>
+				<div class="think-desc">
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil beatae nesciunt quidem non magni officia tempora, nulla? Iste nesciunt facilis pariatur quidem fuga a illum, dolorum quia, cumque, deleniti impedit harum officiis fugit placeat similique, non earum. At, cum. Voluptates.
+					</p>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil beatae nesciunt quidem non magni officia tempora, nulla? Iste nesciunt facilis pariatur quidem fuga a illum, dolorum quia, cumque, deleniti impedit harum officiis fugit placeat similique, non earum. At, cum. Voluptates.
+					</p>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil beatae nesciunt quidem non magni officia tempora, nulla? Iste nesciunt facilis pariatur quidem fuga a illum, dolorum quia, cumque, deleniti impedit harum officiis fugit placeat similique, non earum. At, cum. Voluptates.
+					</p>
+					<button class="btn btn-warning">
+						Детальней
+					</button>
+				</div>
+			</div>
+			<div class="col-lg-4">
+				<div class="think-man">
+					<%= image_tag '02.png' %>
+				</div>
 			</div>
 		</div>
 	</div>
