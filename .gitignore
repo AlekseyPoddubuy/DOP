@@ -32,7 +32,7 @@
 /public/packs
 /public/packs-test
 /node_modules
-environments/production.rb
+# environments/production.rb
 config/database.yml
 config/secrets.yml
 
